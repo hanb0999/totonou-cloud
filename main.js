@@ -6,24 +6,38 @@ const heroSection = document.querySelector('.hero-section');
 window.addEventListener('scroll', () => {
     const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
     
-    if (window.scrollY > heroBottom - 100) {
+    if (window.innerWidth <= 768) {
         menuToggle.classList.add('visible');
     } else {
-        menuToggle.classList.remove('visible');
-        fullscreenMenu.classList.remove('open'); 
+        if (window.scrollY > heroBottom - 100) {
+            menuToggle.classList.add('visible');
+        } else {
+            menuToggle.classList.remove('visible');
+            fullscreenMenu.classList.remove('open'); 
+        }
     }
 });
+
+window.addEventListener('load', () => {
+    if (window.innerWidth <= 768) {
+        menuToggle.classList.add('visible');
+    }
+});
+
 menuToggle.addEventListener('click', () => {
     fullscreenMenu.classList.add('open');
+    menuToggle.classList.add('no-show'); 
 });
 
 closeMenu.addEventListener('click', () => {
     fullscreenMenu.classList.remove('open');
+    menuToggle.classList.remove('no-show');
 });
 
 document.querySelectorAll('.overlay-nav a').forEach(link => {
     link.addEventListener('click', () => {
         fullscreenMenu.classList.remove('open');
+        menuToggle.classList.remove('no-show'); 
     });
 });
 
@@ -35,42 +49,29 @@ function toggleSlide() {
     const headerJp = document.getElementById('header-jp');
     const footerText = document.getElementById('bottom-text');
 
-    const isProblemActive = problem.classList.contains('active');
-
-    if (isProblemActive) {
+    if (problem.classList.contains('active')) {
         problem.classList.remove('active');
         solution.classList.add('active');
-        
         headerEn.innerText = "SOLUTION";
         headerJp.innerText = "解決策";
         footerText.innerText = "ワンクリックで、すべて整う！";
-
         rightArrow.classList.remove('hint-pulse');
-        
     } else {
         solution.classList.remove('active');
         problem.classList.add('active');
-        
         headerEn.innerText = "PROBLEM";
         headerJp.innerText = "課題";
         footerText.innerText = "大人になった瞬間、管理するものが一気に増えていませんか？";
-        
     }
 }
 
-// KEYBOARD NAVIGATION
 window.addEventListener('keydown', function(e) {
     const problem = document.getElementById('problem-slide');
     const solution = document.getElementById('solution-slide');
 
-    if (e.key === "ArrowRight") {
-        if (problem.classList.contains('active')) {
-            toggleSlide();
-        }
-    } 
-    else if (e.key === "ArrowLeft") {
-        if (solution.classList.contains('active')) {
-            toggleSlide();
-        }
+    if (e.key === "ArrowRight" && problem.classList.contains('active')) {
+        toggleSlide();
+    } else if (e.key === "ArrowLeft" && solution.classList.contains('active')) {
+        toggleSlide();
     }
 });
