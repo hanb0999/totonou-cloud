@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>整うCLOUD</title>
+    <link rel="icon" type="image/png" href="images/logo.svg">
+    <link rel="apple-touch-icon" href="images/logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
+    <script src="main.js" defer></script>
+    <!-- ADOBE FONTS -->
+        <!-- ab-shiguma -->
+        <script>
+            (function(d) {
+                var config = {
+                kitId: 'jbw2ozq',
+                scriptTimeout: 3000,
+                async: true
+                },
+                h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+            })(document);
+        </script>
+        <!-- ab-kumiki -->
+        <script>
+            (function(d) {
+                var config = {
+                kitId: 'jbw2ozq',
+                scriptTimeout: 3000,
+                async: true
+                },
+                h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+            })(document);
+        </script>
+
+</head>
+<body>
+    <section class="hero-section" id="hero">
+        <nav class="navbar">
+            <div class="logo-group">
+                <img src="images/logo.svg" alt="整う CLOUD" class="main-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">整うCLOUDとは</a></li>
+                <li><a href="#how-to">使い方</a></li>
+                <li><a href="#features">できること</a></li>
+                <li><a href="#comparison">他サービスとの違い</a></li>
+                <li><a href="#pricing">料金プラン</a></li>
+            </ul>
+        </nav>
+
+        <div class="cloud-bg">
+            <img src="images/cloud-bg.svg" alt="Cloud Background">
+        </div>
+
+        <div class="hero-content">
+            <p class="sub-text">書類も、サブスクも、生活も。</p>
+            <h1 class="main-catchphrase">全部、整う<span>。</span></h1>
+        </div>
+
+        <div class="cta-bar">
+            <div class="cta-bar">
+                <a href="#">無料で、整う生活をはじめる<span class="custom-arrow"></span></a>
+            </div>
+        </div>
+    </section>
+
+    <div id="fullscreen-menu" class="fullscreen-overlay">
+        <button id="close-menu">&times;</button>
+        
+        <div class="menu-container">
+            <nav class="overlay-nav">
+                <a href="#hero">トップ</a>
+                <a href="#about">整うCLOUDとは</a>
+                <a href="#how-to">使い方</a>
+                <a href="#features">できること</a>
+                <a href="#comparison">他のサービスとの違い</a>
+                <a href="#pricing">料金プラン</a>
+                <a href="#cta">ダウンロード</a>
+            </nav>
+
+            <div class="menu-bg-decor">
+                <img src="images/overlay-cloud.svg" alt="" class="menu-cloud-svg">
+                <img src="images/logo.svg" alt="Logo" class="menu-large-logo">
+            </div>
+        </div>
+    </div>
+
+    <button id="menu-toggle" class="menu-toggle-btn">
+        <img src="images/fullscreen-menu.svg" alt="Menu">
+    </button>
+
+    <section class="slider-section" id="about">
+        <button class="slide-arrow left-arrow" aria-label="Previous Slide" onclick="toggleSlide()">◀</button>
+
+        <div class="frame-container" id="frame">
+            <div class="frame-header">
+                <h2 id="header-en">PROBLEM</h2>
+                <p id="header-jp">課題</p>
+            </div>
+
+            <div class="frame-content">
+                <div id="problem-slide" class="slide active">
+                    <div class="paper-mess">
+                        <img src="images/problem-papers.svg" alt="Scattered documents">
+                    </div>
+                </div>
+
+                <div id="solution-slide" class="slide">
+                    <div class="folder-grid">
+                        <div class="folder-item"><img src="images/work-folder.svg" alt=""></div>
+                        <div class="folder-item"><img src="images/taxes-folder.svg" alt=""></div>
+                        <div class="folder-item"><img src="images/insurance-folder.svg" alt=""></div>
+                        <div class="folder-item"><img src="images/personal-folder.svg" alt=""></div>
+                        
+                        <div class="folder-item bottom"><img src="images/rent-folder.svg" alt=""></div>
+                        <div class="folder-item bottom"><img src="images/banking-folder.svg" alt=""></div>
+                        <div class="folder-item bottom"><img src="images/subscription-folder.svg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="frame-footer">
+                <p id="bottom-text">大人になった瞬間、管理するものが一気に増えていませんか？</p>
+            </div>
+        </div>
+
+        <button class="slide-arrow right-arrow hint-pulse" aria-label="Next Slide" onclick="toggleSlide()">▶</button>
+    </section>
+    
+    <section class="process-section" id="how-to">
+        <div class="section-title">
+            <h2>PROCESS</h2>
+            <p>使い方</p>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-card step-blue-white">
+                <div class="step-tab">STEP 1</div>
+                <div class="card-inner">
+                    <h3 class="highlighter"><span>ダウンロード</span></h3>
+                    <div class="icon-circle"><img src="images/step1.svg" alt=""></div>
+                    <ul class="step-list">
+                        <li>Apple ID (iCloud) と連携</li>
+                        <li>Google アカウントと連携</li>
+                        <li>アカウント登録後、すぐに利用開始</li>
+                    </ul>
+                    <div class="pill black-pill label-pill">スマホ・PCどちらでも利用可能</div>
+                </div>
+            </div>
+
+            <div class="process-card step-white-blue">
+                <div class="step-tab">STEP 2</div>
+                <div class="card-inner">
+                    <h3 class="highlighter"><span>書類追加</span></h3>
+                    <div class="icon-circle"><img src="images/step2.svg" alt=""></div>
+                    <div class="pill black-pill">書類の追加方法</div>
+                    <ul class="step-list">
+                        <li>端末からアップロード</li>
+                        <li>スマホで撮影して追加</li>
+                        <li>ファイルをドラッグ＆ドロップ</li>
+                        <li>クラウドストレージと連携</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="process-card step-blue-white">
+                <div class="step-tab">STEP 3</div>
+                <div class="card-inner">
+                    <h3 class="highlighter"><span>自動仕分け</span></h3>
+                    <div class="icon-circle"><img src="images/step3.svg" alt=""></div>
+                    <ul class="step-list">
+                        <li>AIが書類の内容を自動解析</li>
+                        <li>書類の種類を判別</li>
+                        <li>契約書、領収書、保険書類などに分類</li>
+                    </ul>
+                    <div class="pill black-pill label-pill">AIにおまかせ整理</div>
+                </div>
+            </div>
+
+            <div class="process-card step-white-blue">
+                <div class="step-tab">STEP 4</div>
+                <div class="card-inner">
+                    <h3 class="highlighter"><span>確認</span></h3>
+                    <div class="icon-circle"><img src="images/step4.svg" alt=""></div>
+                    <div class="pill black-pill">最終確認だけでOK</div>
+                    <ul class="step-list">
+                        <li>AIが分類に迷った書類のみ表示</li>
+                        <li>正しいカテゴリーを選択</li>
+                        <li>ワンクリックで整理が完了</li>
+                        <li>すべての書類に自動反映</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="process-footer-text">
+            <p>※ 自動で書類を取得することはありません。</p>
+            <p>※ すべてユーザーの操作で管理できます。</p>
+        </div>
+    </section>
+
+    <section class="features-section" id="features">
+        <div class="section-title">
+            <h2>KEY FEATURES</h2>
+            <p>整うCLOUD でできること</p>
+        </div>
+
+        <div class="features-container">
+            <div class="features-left">
+                <div class="feature-pill">
+                    <div class="pill-text">
+                        <h3>更新・期限リマインド</h3>
+                        <p>忘れない。焦らない。</p>
+                    </div>
+                    <div class="pill-icon">🔔</div>
+                </div>
+                <div class="feature-pill">
+                    <div class="pill-text">
+                        <h3>書類管理</h3>
+                        <p>重要書類を、迷わず保存。</p>
+                    </div>
+                    <div class="pill-icon">📁</div>
+                </div>
+                <div class="feature-pill">
+                    <div class="pill-text">
+                        <h3>サブスク一元管理</h3>
+                        <p>支出が、見える。</p>
+                    </div>
+                    <div class="pill-icon">📊</div>
+                </div>
+                <div class="feature-pill">
+                    <div class="pill-text">
+                        <h3>サブスク解約サポート</h3>
+                        <p>やめたい時も、迷わない。</p>
+                    </div>
+                    <div class="pill-icon">✂️</div>
+                </div>
+            </div>
+
+            <div class="features-right">
+                <div class="large-card">
+                    <div class="large-card-content">
+                        <h3>ずっと整う、クラウド管理</h3>
+                        <ul class="feature-list">
+                            <li>契約・支払い状況を自動で<br>アップデート</li>
+                            <li>期限忘れを防ぐリマインド機能</li>
+                            <li>高セキュリティなクラウド保管</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="folder-background-image"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section" id="comparison">
+        <div class="section-title">
+            <h2>SEE THE DIFFERENCE</h2>
+            <p>整うCLOUDと他サービスの違い</p>
+        </div>
+
+        <div class="table-container">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>iCloud / Google Drive</th>
+                        <th class="highlight-column">整うCLOUD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>自分仕分け（AI）</td>
+                        <td>手動フォルダのみ</td>
+                        <td class="highlight-cell">✅ あり</td>
+                    </tr>
+                    <tr>
+                        <td>サブスク期限リマインド</td>
+                        <td><span class="cross">❌</span> なし</td>
+                        <td class="highlight-cell">✅ あり</td>
+                    </tr>
+                    <tr>
+                        <td>契約更新アラート</td>
+                        <td><span class="cross">❌</span> なし</td>
+                        <td class="highlight-cell">✅ あり</td>
+                    </tr>
+                    <tr>
+                        <td>全生活書類を一元管理</td>
+                        <td>⚠️ 自分で整理する必要あり</td>
+                        <td class="highlight-cell">✅ あり</td>
+                    </tr>
+                    <tr>
+                        <td>スマート提案</td>
+                        <td><span class="cross">❌</span> なし</td>
+                        <td class="highlight-cell">✅ あり</td>
+                    </tr>
+                    <tr>
+                        <td>すぐ使える（導入簡単）</td>
+                        <td>⚠️ 初期セットアップ必要</td>
+                        <td class="highlight-cell">✅ あり</td>
+                    </tr>
+                    <tr>
+                        <td>スマホ＋PC対応</td>
+                        <td>✅ あり</td>
+                        <td class="highlight-cell">✅ あり</td>
+                    </tr>
+                    <tr>
+                        <td>カテゴリ検索</td>
+                        <td><span class="cross">❌</span> なし</td>
+                        <td class="highlight-cell">✅ あり</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="comparison-footer">
+            <p>書類が増えても、管理の負担は増やさない。</p>
+            <h3 class="footer-catchphrase highlighter"><span>整うCLOUDは、そんな毎日のためのクラウドです。</span></h3>
+            <div class="dashed-line"></div>
+        </div>
+    </section>
+
+    <section class="pricing-section" id="pricing">
+        <div class="section-title">
+            <h2>PRICING PLAN</h2>
+            <p>料金プラン</p>
+        </div>
+
+        <div class="pricing-container">
+            <div class="pricing-card white-card">
+                <div class="plan-header">
+                    <h3>Free Trial</h3>
+                    <p class="plan-subtitle">今月限定｜1か月無料キャンペーン</p>
+                    <div class="price-box blue-highlight">
+                        <span>今だけ <b>0</b> 円</span>
+                    </div>
+                </div>
+                <ul class="plan-list">
+                    <li>スタンダード全機能対象</li>
+                    <li>カード登録不要</li>
+                    <li>1か月間じっくりお試し可能</li>
+                </ul>
+                <p class="plan-target">まずは気軽に試したい方に</p>
+            </div>
+
+            <div class="pricing-card blue-card">
+                <div class="plan-header">
+                    <h3>Standard Plan</h3>
+                    <div class="price-box white-highlight">
+                        <span>月額 <b>480</b> 円</span>
+                    </div>
+                </div>
+                <ul class="plan-list">
+                    <li>書類の自動仕分け（無制限）</li>
+                    <li>カテゴリ検索</li>
+                    <li>サブスク期限リマインド</li>
+                    <li>契約更新アラート</li>
+                    <li>クラウド連携（複数）</li>
+                    <li>AI仕分け＋確認機能</li>
+                    <li>スマホ・PC対応</li>
+                </ul>
+                <p class="plan-target">新社会人の基本プラン</p>
+            </div>
+
+            <div class="pricing-card dark-blue-card">
+                <div class="plan-header">
+                    <h3>Premium Plan</h3>
+                    <div class="price-box white-highlight">
+                        <span>月額 <b>780</b> 円</span>
+                    </div>
+                </div>
+                <ul class="plan-list">
+                    <li>Standardのすべて</li>
+                    <li>重要書類の優先管理</li>
+                    <li>スマート提案（見直し・整理<br>アドバイス）</li>
+                    <li>高度な検索・フィルタ</li>
+                    <li>優先サポート</li>
+                </ul>
+                <p class="plan-target">管理をすべて任せたい方に</p>
+            </div>
+        </div>
+
+        <div class="pricing-footer">
+            <p>※ 無料キャンペーンは今月限定です</p>
+            <p>※ キャンペーン期間終了後、自動課金は行われません</p>
+            <p>※ いつでもプラン変更・解約可能</p>
+        </div>
+    </section>
+
+    <section class="final-cta-section" id="cta">
+        <div class="cta-container">
+            <div class="cta-visual">
+                <div class="promo-pill">
+                    <span>🗓️ 今だけ1ヶ月無料お試し可能</span>
+                </div>
+                <div class="app-icon-wrapper">
+                    <img src="images/app.svg" alt="整うCLOUD App Icon" class="main-app-icon">
+                </div>
+                <div class="store-buttons">
+                    <a href="#"><img src="images/apple.svg" alt="Download on the App Store"></a>
+                    <a href="#"><img src="images/google-play.svg" alt="Get it on Google Play"></a>
+                </div>
+            </div>
+
+            <div class="cta-text-content">
+                <h2 class="final-catchphrase">今すぐ、<br>整った毎日<br>をはじめよう</h2>
+                <p class="final-subtext">管理に悩む時間を、もう増やさない。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-inner">
+            <span class="copyright">©2026整うCLOUD</span>
+            <a href="#top" class="back-to-top">BACK TO TOP</a>
+        </div>
+    </footer>
+</body>
+</html>

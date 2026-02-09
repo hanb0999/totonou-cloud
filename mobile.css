@@ -1,0 +1,713 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden; 
+    width: 100%;
+}
+
+/* HERO */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    z-index: 10;
+}
+.main-logo {
+    width: 180px; 
+}
+.nav-links {
+    display: none; 
+}
+.cloud-bg {
+    position: absolute;
+    top: 30%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140%; 
+    height: auto;
+    z-index: 1;
+}
+.cloud-bg img {
+    width: 100%;
+    display: block;
+}
+.hero-content {
+    position: relative;
+    right: auto;
+    bottom: -15%; 
+    text-align: center;
+    z-index: 5;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sub-text {
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+    margin-right: -5%;
+    -webkit-text-stroke: 0; 
+    white-space: nowrap;
+}
+.main-catchphrase {
+    font-size: 42px;
+    font-weight: 100;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    margin-right: -10%;
+    -webkit-text-stroke: 0; 
+}
+.main-catchphrase span {
+    color: #000;
+}
+.cta-bar {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 70px; 
+    background-color: #ffcc00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+.cta-bar a {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    display: block;
+    align-items: center;
+    gap: 10px;
+}
+.custom-arrow {
+    display: none; 
+}
+
+/* MENU */
+.fullscreen-overlay {
+    background: #ffffff;
+    overflow: hidden; 
+}
+#close-menu {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: #000;
+    z-index: 10002;
+    line-height: 1;
+}
+.menu-container {
+    padding: 80px 20px; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    z-index: 5;
+}
+.menu-large-logo {
+    position: relative; 
+    width: 200px; 
+    margin-bottom: 50px; 
+    z-index: 10;
+    bottom: 90%;
+    left: 25%;
+}
+.overlay-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 15%;
+}
+.overlay-nav a {
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    text-indent: 0.1em; 
+    display: inline-block;
+    width: fit-content !important;
+    text-align: center;
+    padding: 5px 0;
+}
+.overlay-nav a:hover {
+    transform: scale(1.1);
+}
+.overlay-nav a::after {
+    left: 0;
+    width: 0;
+    bottom: 0;
+}
+.overlay-nav a:hover::after {
+    width: 100%;
+}
+.menu-bg-decor {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; 
+    pointer-events: none;
+    overflow: visible;
+}
+.menu-cloud-svg {
+    position: absolute;
+    bottom: 0; 
+    right: -35%; 
+    width: 180%; 
+    height: auto;
+    opacity: 0.7;
+    z-index: 1;
+}
+.menu-toggle-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    top: 20px;
+    right: 20px;
+    -webkit-tap-highlight-color: transparent;
+}
+.menu-toggle-btn img {
+    width: 35px;
+}
+
+/* 整うCLOUDとは */
+.slider-section {
+    height: auto;
+    min-height: auto;
+    overflow: hidden !important; 
+    width: 100% !important;
+    position: relative;
+    padding: 40px 20px;
+}
+.frame-container {
+    border: none;
+    padding: 0;
+    max-width: 100%;
+}
+.frame-header, .frame-footer, .slide-arrow {
+    display: none;
+}
+.slide {
+    display: flex !important;
+    opacity: 1 !important;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+#problem-slide {
+    align-items: flex-start; 
+}
+#problem-slide::before {
+    content: "PROBLEM\A課題";
+    white-space: pre;
+    font-family: 'ab-shiguma', sans-serif;
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.paper-mess {
+    width: 100vw !important;
+    margin-left: -20px !important;
+    overflow: hidden !important;   
+    position: relative;
+    display: block;
+    min-height: 250px;
+}
+.paper-mess img {
+    width: 150% !important; 
+    max-width: none !important;
+    margin-left: 0 !important; 
+    transform: translateX(10%) !important; 
+    display: block;
+    margin-bottom: 0;
+}
+#problem-slide::after {
+    content: "大人になった瞬間、\A管理するものが一気に増えていませんか？";
+    white-space: pre;
+    font-family: 'Nagino', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 30px;
+    margin-bottom: -10%;
+    text-align: left;
+}
+#solution-slide {
+    align-items: flex-end; 
+}
+#solution-slide::before {
+    content: "SOLUTION\A解決策";
+    white-space: pre;
+    font-family: 'ab-shiguma', sans-serif;
+    line-height: 1.5;
+    font-size: 28px;
+    font-weight: 100;
+    margin-bottom: 40px;
+    text-align: right;
+}
+.folder-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+.folder-item {
+    grid-column: span 1 !important;
+    position: static !important;
+    left: 0 !important;
+    width: 100%;
+}
+.folder-item:nth-child(n+5) {
+    grid-column: span 1;
+}
+#solution-slide .folder-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#solution-slide .folder-item {
+    width: 35%; 
+    margin-bottom: 5px;
+}
+#solution-slide .folder-item:nth-child(n+5) {
+    width: 35%; 
+}
+#solution-slide::after {
+    content: "ワンクリックで、すべて整う！";
+    font-family: 'Nagino', sans-serif;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: -50px;
+    width: 100%;
+    text-align: center;
+}
+
+/* 使い方 */
+.process-section {
+    padding: 0px 20px;
+    background: #fff;
+    text-align: center;
+}
+.section-title h2 {
+    font-family: 'ab-shiguma', sans-serif;
+    font-size: 40px;
+}
+.section-title p {
+    font-family: 'ab-shiguma', sans-serif;
+    font-size: 20px;
+    margin-top: 15px; 
+}
+.process-grid {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 50px; 
+    width: 100%;
+}
+.process-card {
+    width: 100%;
+    max-width: 320px; 
+    margin-top: 50px;
+}
+.card-inner {
+    height: auto; 
+    min-height: 520px;
+    padding: 40px 20px 30px;
+    box-shadow: -3px 3px 0px 0px #000; 
+    align-items: center;
+    text-align: center;
+}
+.step-tab {
+    top: -22px;
+    left: 25px;
+    font-size: 14px;
+    padding: 4px 12px;
+}
+.highlighter {
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+.highlighter span {
+    font-size: 24px;
+    letter-spacing: 0.24em;
+}
+.highlighter::before {
+    height: 15px; 
+    bottom: 5px;
+}
+.icon-circle {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 25px;
+}
+.icon-circle img {
+    width: 75%;
+}
+.step-list {
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+}
+.step-list li {
+    font-size: 15px;
+    line-height: 2.2;
+    margin-bottom: 5px;
+    display: block;
+}
+.black-pill {
+    font-size: 15px;
+    padding: 2px 12px;
+    white-space: nowrap;
+}
+.process-footer-text {
+    margin-top: 40px;
+    padding: 0 10px;
+}
+.process-footer-text p {
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.05em;
+}
+
+/* できること */
+.features-section {
+    padding: 60px 20px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #63CEFF 100%);
+}
+.features-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+    width: 100%;
+    max-width: 340px; 
+    margin: 20px auto;
+}
+.features-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; 
+}
+.feature-pill {
+    width: 100%;
+    height: auto;
+    min-height: 65px;
+    padding: 15px 20px;
+    background: #FFFFFF;
+    border-radius: 40px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.pill-text {
+    text-align: left;
+}
+.pill-text h3 {
+    font-size: 16px;
+    margin-bottom: 2px;
+    letter-spacing: 0.05em;
+}
+.pill-text p {
+    font-size: 11px;
+    color: #666;
+}
+.pill-icon {
+    font-size: 22px;
+    position: static; 
+}
+.features-right {
+    width: 100%; 
+}
+.large-card {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    background: #FFFFFF;
+    border-radius: 40px;
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.large-card-content {
+    z-index: 2;
+    text-align: left;
+}
+.large-card h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+.feature-list li {
+    font-size: 14px;
+    line-height: 2;
+    position: relative;
+    padding-left: 15px;
+}
+.feature-list li::before {
+    content: "・";
+    position: absolute;
+    left: 0;
+}
+.folder-background-image {
+    bottom: -50%;
+}
+
+/* 整うCLOUDと他サービスの違い */
+.comparison-section {
+    padding: 60px 0; 
+    background: #fff;
+}
+.comparison-section .section-title {
+    padding: 0 20px;
+}
+.table-container {
+    width: 100%;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+    padding: 0 10px;
+    margin-top: 40px;
+}
+.comparison-table {
+    min-width: 480px;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 0 auto;
+}
+.comparison-table th, 
+.comparison-table td {
+    padding: 15px 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+.comparison-table td:first-child, 
+.comparison-table th:first-child {
+  position: sticky;
+  left: 0;
+  background-color: #fff;
+  z-index: 2;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: bold;
+    width: 160px;
+}
+.highlight-column, .highlight-cell {
+    background-color: #f0faff;
+    color: #000;
+    font-weight: bold;
+}
+.cross {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+.comparison-footer {
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.comparison-footer p {
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+.footer-catchphrase {
+    width: 100%;
+    margin-bottom: 15px; 
+}
+.footer-catchphrase span {
+    display: inline-block;
+    position: relative;
+    font-size: 18px; 
+    text-align: center;
+    z-index: 2;
+}
+.dashed-line {
+    display: none;
+}
+
+/* 料金プラン */
+.pricing-section {
+    padding: 40px 20px;
+    background: #fff;
+    text-align: center;
+}
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; 
+    width: 100%;
+}
+.pricing-card {
+    width: 100%;
+    max-width: 320px; 
+    padding: 40px 20px;
+    border-radius: 25px;
+    border: 2px solid #000;
+    box-shadow: 6px 6px 0px 0px #000; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.price-display {
+    margin: 25px 0;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+.price-display .amount {
+    font-size: 48px;
+    letter-spacing: -0.02em;
+}
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+    width: 100%;
+    max-width: 240px;
+}
+.plan-features li {
+    font-size: 13px;
+    line-height: 2.2;
+    position: relative;
+    padding-left: 15px;
+}
+.plan-features li::before {
+    content: "・";
+    position: absolute;
+    left: 0;
+}
+.pricing-notes {
+    margin-top: 40px;
+    text-align: center;
+}
+.pricing-notes p {
+    font-size: 11px;
+    line-height: 2;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* CTA */
+.final-cta-section {
+    padding: 40px 40px 0 !important; 
+    background-color: #ffffff !important;
+}
+.cta-container {
+    margin-top: -10%;
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: center !important;
+    text-align: center !important;
+    gap: 0 !important; 
+}
+.cta-text-content {
+    order: 1 !important;
+    width: 100% !important;
+    margin-bottom: 30px !important;
+}
+.final-catchphrase {
+    font-size: 45px !important; 
+    font-weight: 100 !important;
+    line-height: 1.5 !important;
+    margin-bottom: 15px !important;
+    display: block !important;
+}
+.cta-visual {
+    order: 2 !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+.promo-pill {
+    order: 1 !important; 
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+    padding: 8px 20px !important;
+}
+.app-icon-wrapper {
+    order: 2 !important; 
+    width: 280px !important;
+    height: auto !important;
+    margin-bottom: 20px !important;
+}
+.main-app-icon {
+    width: 100% !important;
+    height: auto !important;
+}
+.store-buttons {
+    order: 3 !important; 
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    margin-bottom: 50px !important;
+}
+.store-buttons img {
+    height: 45px !important;
+    width: auto !important;
+}
+.final-subtext {
+    order: 3 !important; 
+    font-size: 15px !important;
+    color: #333 !important;
+}
+.main-footer {
+    width: 100% !important;
+    background-color: #ffcc00 !important;
+    padding: 15px 0 !important;
+}
+.footer-inner {
+    justify-content: center !important; 
+    padding: 0 !important;
+}
+.copyright {
+    font-size: 11px !important;
+    font-weight: bold !important;
+}
+.back-to-top {
+    display: none !important;
+}
