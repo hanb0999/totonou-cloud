@@ -131,7 +131,7 @@ body {
 .menu-large-logo {
     position: relative; 
     width: 200px; 
-    margin-bottom: 50px; 
+    margin-bottom: 20px; 
     z-index: 10;
     bottom: 85%;
     left: 25%;
@@ -145,7 +145,7 @@ body {
     width: 100%;
     text-align: center;
     position: relative;
-    top: 12%;
+    top: 20%;
 }
 .overlay-nav a {
     font-size: 20px;
