@@ -374,8 +374,13 @@ body {
 .icon-circle img {
     width: 75%;
     height: auto;
-    image-rendering: -webkit-optimize-contrast; 
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
     transform: translateZ(0); 
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
 }
 .step-list {
     margin: 20px 0;
