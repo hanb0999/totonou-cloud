@@ -364,10 +364,18 @@ body {
 .icon-circle {
     width: 150px;
     height: 150px;
-    margin-bottom: 25px;
+    margin: 0 auto 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; 
+    overflow: visible; 
 }
 .icon-circle img {
     width: 75%;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast; 
+    transform: translateZ(0); 
 }
 .step-list {
     margin: 20px 0;
